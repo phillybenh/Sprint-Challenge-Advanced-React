@@ -20,22 +20,13 @@ class App extends React.Component {
         this.setState({
           playerData: response.data,
         });
-        // axios.get(response.data.followers_url, config).then((response) => {
-        //   // console.log("Follower Data: ", response.data);
-        //   response.data.forEach((user) => {
-        //     axios.get(user.url, config).then((response) => {
-        //       console.log("Follower Data: ", response.data);
-        //       this.setState({
-        //         followerData: [...this.state.followerData, response.data]
-        //       });
-        //     });
-        //   });
-        // });
       })
       .catch((error) => {
         console.log("The data was not returned", error);
       });
   }
+
+
 
   render() {
     return (
@@ -44,13 +35,6 @@ class App extends React.Component {
           <h1>Sprint Challenge: Advanced React - Women's World Cup</h1>
         </header>
         <UserGrid playerData={this.state.playerData} />
-        {/* <Header>
-          <H1>GitHub User Followers</H1>
-        </Header>
-        <UserGrid
-          githubData={this.state.githubData}
-          followerData={this.state.followerData}
-        /> */}
       </div>
     );
   }

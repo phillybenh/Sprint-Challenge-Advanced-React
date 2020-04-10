@@ -2,10 +2,13 @@ import React from "react";
 import UserCard from "./UserCard";
 import styled from "styled-components";
 
+//Hooks
+import {useLocalStorage} from "../hooks/useLocalStorage";
+import {useDarkMode} from "../hooks/useDarkMode";
+
 const GridContainer = styled.div`
   width: 100%;
   margin: 0;
-  background: dodgerblue;
   padding: 10%;
   display: grid;
   grid-template-columns: 1fr;
@@ -20,13 +23,22 @@ const H2 = styled.h2`
 `;
 
 export default function UserGrid(props) {
-  console.log(props.playerData);
+  // console.log(props.playerData);
+
+  const [dark, setDark] = useDarkMode("dark", false); 
+
+  const toggler = (e) => {
+    e.preventDefault();
+    setDark(!dark);
+  };
 
   return (
     <GridContainer>
+      <button onClick={toggler}> Dark Mode</button>
+
       <H2>Players </H2>
       {props.playerData.map((player) => (
-        <UserCard data={player} />
+        <UserCard key={player.id} data={player} />
       ))}
     </GridContainer>
   );

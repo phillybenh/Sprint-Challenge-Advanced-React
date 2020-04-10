@@ -2,7 +2,7 @@
 box-sizing: border-box;}
 
 body {
-  background: peachpuff;
+  background: lightblue;
 }
 .App-header {
   background-color: #282c34;
@@ -14,9 +14,16 @@ body {
   font-size: 2rem;
   text-align: center;
   color: white;
+  
 }
 
 .App-link {
   color: #61dafb;
 }
-
+.dark-mode {
+  background: darkslategray;
+  color: darkviolet;
+}
+.quietHeader {
+  color: darkslategray;
+}

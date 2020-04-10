@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
-  background: darkgray;
   width: 90%;
+  background: darkgrey;
   max-width: 600px;
   padding: 25px;
   border-radius: 5px;
@@ -35,15 +35,12 @@ export default function UserCard(props) {
   
     // console.log("Card Data", props.data);
   
-
-
-
   return (
-    <CardContainer>
+    <CardContainer className="card">
       <UserData>
-      <H3>{props.data.name}</H3>
-      <H4>{props.data.country}</H4>
-      <p>Number of searches: {props.data.searches}</p>
+        <H3>{props.data.name}</H3>
+        <H4>{props.data.country}</H4>
+        <p>Number of searches: {props.data.searches}</p>
       </UserData>
     </CardContainer>
   );
