@@ -14,12 +14,9 @@ const CardContainer = styled.div`
 
 `;
 
-
 const UserData = styled.div`
 padding: 0 10px;
 `;
-
-
 
 const H3 = styled.h3`
   margin: 0;
@@ -31,7 +28,7 @@ const H4 = styled.h4`
   font-style: italic;
 `;
 
-export default function UserCard(props) {
+export default function Card(props) {
   
     // console.log("Card Data", props.data);
   

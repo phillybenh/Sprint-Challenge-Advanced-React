@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import UserGrid from "./components/UserGrid";
+import Grid from "./components/Grid";
 
 import "./App.css";
 
@@ -26,15 +26,13 @@ class App extends React.Component {
       });
   }
 
-
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1>Sprint Challenge: Advanced React - Women's World Cup</h1>
         </header>
-        <UserGrid playerData={this.state.playerData} />
+        <Grid data-testid="grid" playerData={this.state.playerData} />
       </div>
     );
   }

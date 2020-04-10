@@ -1,9 +1,9 @@
 import React from "react";
-import UserCard from "./UserCard";
+import Card from "./Card";
+
 import styled from "styled-components";
 
 //Hooks
-import {useLocalStorage} from "../hooks/useLocalStorage";
 import {useDarkMode} from "../hooks/useDarkMode";
 
 const GridContainer = styled.div`
@@ -22,7 +22,7 @@ const H2 = styled.h2`
   justify-self: start;
 `;
 
-export default function UserGrid(props) {
+export default function Grid(props) {
   // console.log(props.playerData);
 
   const [dark, setDark] = useDarkMode("dark", false); 
@@ -34,11 +34,14 @@ export default function UserGrid(props) {
 
   return (
     <GridContainer>
-      <button onClick={toggler}> Dark Mode</button>
+      <button data-testid="darkBTN" onClick={toggler}>
+        {" "}
+        Dark Mode
+      </button>
 
       <H2>Players </H2>
       {props.playerData.map((player) => (
-        <UserCard key={player.id} data={player} />
+        <Card key={player.id} data={player} />
       ))}
     </GridContainer>
   );
