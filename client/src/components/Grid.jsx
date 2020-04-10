@@ -33,7 +33,7 @@ export default function Grid(props) {
   };
 
   return (
-    <GridContainer>
+    <GridContainer data-testid="grid">
       <button data-testid="darkBTN" onClick={toggler}>
         {" "}
         Dark Mode

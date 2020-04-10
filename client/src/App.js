@@ -8,7 +8,9 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      playerData: [],
+      playerData: [
+        // { name: "Alex Morgan", country: "United States", searches: 100, id: 0 },
+      ]
     };
   }
 
@@ -32,7 +34,7 @@ class App extends React.Component {
         <header className="App-header">
           <h1>Sprint Challenge: Advanced React - Women's World Cup</h1>
         </header>
-        <Grid data-testid="grid" playerData={this.state.playerData} />
+        <Grid playerData={this.state.playerData} />
       </div>
     );
   }

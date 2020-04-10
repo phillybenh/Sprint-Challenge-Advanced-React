@@ -33,7 +33,7 @@ export default function Card(props) {
     // console.log("Card Data", props.data);
   
   return (
-    <CardContainer className="card">
+    <CardContainer data-testid="card">
       <UserData>
         <H3>{props.data.name}</H3>
         <H4>{props.data.country}</H4>

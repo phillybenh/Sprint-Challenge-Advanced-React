@@ -7,10 +7,10 @@ export const useDarkMode = (key, initialValue) => {
   useEffect(() => {
     if (dark === true) {
       document.querySelector("body").classList.add("dark-mode");
-      document.querySelector("h1").classList.add("quietHeader");
+      document.querySelector("body").classList.add("quietHeader");
     } else {
       document.querySelector("body").classList.remove("dark-mode");
-      document.querySelector("h1").classList.remove("quietHeader");
+      document.querySelector("body").classList.remove("quietHeader");
     }
   }, [dark]);
   return [dark, setDark];
